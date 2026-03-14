@@ -3,9 +3,10 @@ from openai import OpenAI
 
 app = Flask(__name__)
 
+from openai import OpenAI
 import os
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
 @app.route("/", methods=["GET","POST"])
 def home():
